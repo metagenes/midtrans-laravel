@@ -28,8 +28,6 @@ This is REST API using Laravel and Midtrans for PHP.
 
 The REST API to the app is described below.
 
-## Get list of Things
-
 ### Request
 
 ## Create a new Transaction
