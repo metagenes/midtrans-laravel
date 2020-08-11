@@ -10,7 +10,6 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Controllers;
 use App\Model\Checkout;
 use Illuminate\Http\Request;
-// use App\Model\Checkout;
 use Veritrans_Config;
 use Veritrans_Snap;
 use Veritrans_Notification;
@@ -20,7 +19,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function welcome(){
-        return "Welcome to Donation API";
+        return "Welcome to Checkout API for reference please refer to ...";
     }
 
     /**
@@ -120,7 +119,7 @@ class Controller extends BaseController
           $type = $notif->payment_type;
           $orderId = $notif->order_id;
           $fraud = $notif->fraud_status;
-          $donation = Donation::findOrFail($orderId);
+          $checkout = Checkout::findOrFail($orderId);
  
           if ($transaction == 'capture') {
  

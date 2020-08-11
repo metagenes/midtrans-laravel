@@ -13,7 +13,7 @@ This is REST API using Laravel and Midtrans for PHP.
 
 ## Setup .ENV
 
-    make .env file based on .env.example and fill database credential
+    make .env file based on .env.example. Fill database and midtrans credential.
 
 ## Migrate App
 
@@ -36,9 +36,9 @@ The REST API to the app is described below.
 
 ### Request
 
-`POST /`
+`POST /checkout`
 
-    curl -i -H 'Accept: application/json' -d 'customer_name=Name&customer_email=Email&customer_phone=123&product_description=description&total_price=12000' http://localhost/midtrans_ci/index.php/product
+    curl -i -H 'Accept: application/json' -d 'customer_name=Name&customer_email=Email&customer_phone=123&product_description=description&total_price=12000' http://localhost:8000/api/checkout
 
 ### Response
 
